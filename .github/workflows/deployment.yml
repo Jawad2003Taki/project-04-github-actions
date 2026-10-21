@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: clone code
         uses: actions/checkout@v7
+      - name: install dependency
+        run: npm ci
       - name: lint the code
         run: npm run lint
   test:
@@ -14,6 +16,8 @@ jobs:
     steps:
       - name: clone code
         uses: actions/checkout@v7
+      - name: install dependency
+        run: npm ci
       - name: test the code
         run: npm run test
   build:
@@ -22,6 +26,8 @@ jobs:
     steps:
       - name: clone code
         uses: actions/checkout@v7
+      - name: install dependency
+        run: npm ci
       - name: build the code
         run: npm run build
   deploy:
